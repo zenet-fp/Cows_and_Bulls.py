@@ -1,16 +1,14 @@
-#A player will create a secret code, usually a 4-digit number.  This number should have no repeated digits.
-#Another player makes a guess (4 digit number) to crack the secret number. Upon making a guess, 2 hints will be provided - Cows and Bulls.
+# A player will create a secret code, usually a 4-digit number.  This number should have no repeated digits.
+# Another player makes a guess (4 digit number) to crack the secret number. Upon making a guess, 2 hints will be provided - Cows and Bulls.
 
-#Bulls indicate the number of correct digits in the correct position
+# Bulls indicate the number of correct digits in the correct position
 # and cows indicates the number of correct digits in the wrong position.
 
 # For example, if the secret code is 1234 and the guessed number is 1246 then we have 2 BULLS (for the exact matches of digits 1 and 2)
 # and 1 COW (for the match of digit 4 in the wrong position)
 
-#The player keeps on guessing until the secret code is cracked.
+# The player keeps on guessing until the secret code is cracked.
 # The player who guesses in the minimum number of tries wins.
-
-#user_input = input("Enter the 4 digit number: ")
 
 class CowsAndBulls:
     def __init__(self, num):
@@ -20,26 +18,9 @@ class CowsAndBulls:
         self.number = [int(digit) for digit in str(self.num)]
 
     def run_game(self):
-
         self.second_player()
 
-
-
-    #def user_number(self):
-    #    while True:
-    #        user_digit = input("Enter your 4 digit number:")
-    #        if user_digit.isdigit():
-    #            user_digit = int(user_digit)
-    #           self.number = user_digit
-    #            break
-    #
-    #        elif len(user_digit) < 0 or len(user_digit) > 4:
-    #            print("Invalid number.")
-
-    #        else:
-    #            print("Something Went Wrong.")
-
-
+    
     def second_player(self):
         while True:
 
@@ -53,8 +34,7 @@ class CowsAndBulls:
             else:
                 print("Something Went Wrong.")
 
-
-
+    
     def validate_guess(self, guess):
         self.bulls = 0
         self.cows = 0
