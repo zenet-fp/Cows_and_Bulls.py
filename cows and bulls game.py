@@ -25,7 +25,7 @@ class CowsAndBulls:
         while True:
 
             player_guess = input("Guess :")
-            if player_guess.isdigit():
+            if len(player_guess) == 4:
                 self.validate_guess(player_guess)
 
             elif len(player_guess) != 4:
