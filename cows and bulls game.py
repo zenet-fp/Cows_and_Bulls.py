@@ -28,7 +28,7 @@ class CowsAndBulls:
             if player_guess.isdigit():
                 self.validate_guess(player_guess)
 
-            elif len(player_guess) < 0 or len(player_guess) > 4:
+            elif len(player_guess) != 4:
                 print("Invalid number.")
 
             else:
